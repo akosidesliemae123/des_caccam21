@@ -1,0 +1,46 @@
+# Laboratory 04: The Cloud-Native Engineer
+
+## Mission Overview
+
+CloudNova Technologies has a client whose traditional Virtual Machines boot slowly and waste RAM. In this mission, I compared VMs with containers, then used a KillerCoda Docker playground to deploy, manage, and remove a containerized Nginx web server, documenting every command so the client's IT team can replicate it.
+
+## Objectives
+
+- Differentiate between traditional Virtual Machines (VMs) and Containers.
+- Access a Docker-enabled cloud environment using KillerCoda.
+- Execute fundamental Docker CLI commands.
+- Pull, run, manage, and terminate a containerized application (Nginx).
+- Create professional technical documentation using Markdown.
+- Continue developing a well-organized GitHub Cloud Computing Portfolio.
+
+## Docker Commands Executed
+
+| Checkpoint | Command | Purpose |
+|---|---|---|
+| 3 | `docker --version` | Verify Docker is installed |
+| 3 | `docker info` | Check the status of the Docker environment |
+| 4 | `docker pull nginx` | Download the official Nginx image from Docker Hub |
+| 4 | `docker run -d -p 8080:80 --name my-nginx nginx` | Run Nginx in detached mode, mapping host port 8080 to container port 80 |
+| 4 | `curl http://localhost:8080` | Confirm the web server responds |
+| 5 | `docker ps` | List running containers |
+| 5 | `docker stop my-nginx` | Stop the running container |
+| 5 | `docker ps -a` | Verify the container is stopped |
+| 5 | `docker rm my-nginx` | Remove the container completely |
+
+## Skills Learned
+
+- Explaining the architectural differences between VMs and containers.
+- Verifying Docker installation and status on Linux.
+- Pulling images and running containers in detached mode.
+- Exposing a container's service through port mapping.
+- Managing the container lifecycle (run, list, stop, remove).
+- Documenting technical procedures in Markdown and organizing a GitHub repository.
+
+## Challenges Encountered
+
+- Remembering the direction of port mapping (`host:container`, so `8080:80`).
+- Understanding the difference between `docker ps` and `docker ps -a`.
+- Learning that a container must be stopped before it can be removed with `docker rm`.
+- Taking clear screenshots of the KillerCoda terminal.
+
+> Edit this section to reflect the actual problems you ran into.
